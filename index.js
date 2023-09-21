@@ -59,6 +59,7 @@ app.get('/auth/callback',
 
 // Success  
 app.get('/auth/callback/success', (req, res) => {
+    console.log(req.user)
         if (!req.user)
             res.redirect('/auth/callback/failure');
         
